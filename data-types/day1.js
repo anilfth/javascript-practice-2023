@@ -38,6 +38,15 @@ console.log("Anil" - "Lpu") // nan -> not a number
  console.log (true + true)
  console.log(true + false)
  console.log(false + true)
- console.log(false - false)
- 
+ console.log(false - false) 
+  
+//   NaN practice
+
+// NaN === NaN 
+console.log(NaN === NaN)
+
+console.log(Number.NaN === NaN)
+console.log(isNaN(NaN))
+console.log (Number.isNaN(NaN))
+console.log(Number.isNaN(NaN))
 
