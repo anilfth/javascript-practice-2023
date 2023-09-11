@@ -49,4 +49,36 @@ console.log(Number.NaN === NaN)
 console.log(isNaN(NaN))
 console.log (Number.isNaN(NaN))
 console.log(Number.isNaN(NaN))
+ 
+
+ var num = 15
+ var newNum = num++ + 5
+ console.log(num)
+ console.log(newNum)
+
+  var num = 15
+  var newNum = --num  - 5
+  console.log(num)
+  console.log(newNum)
+
+   
+    // LOGICAL OPERATOR 
+
+// LOGICAL AND OPERATOR (&&)
+
+//  IF THE BOTH CONDITION ARE TRU THEN IT WILL GIVE A TRUE OUTPUT 
+
+ var a = 30
+ var b = 20
+console.log( (a>b)  && (b>a) ) // here first condition i true and second condtion is false so ouytput will be false  
+  console.log(a>b && b < a)   // here both condition are true
+
+                                // LOGIAL OR (||)
+  //  IF ONLY ONE CONDITION IS TRUE THEN OUTPUT WILL BE TRUE 
+  
+    var a = 20
+    var b = 30 
+    console.log(a > b || b > a) //  here first condition is false and second consition is true  so o/p will be true 
+    console.log( (a > b) || (b > a) && (a > b));  //1st conditon is false 2nd is true so o/p true because of we are using or operator and second condition is false so ouptput wwill be false because w are using and operator 
+
 
