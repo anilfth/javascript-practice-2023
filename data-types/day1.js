@@ -164,8 +164,40 @@ console.log( (a>b)  && (b>a) ) // here first condition i true and second condtio
               default:
                 console.log("please enter a valid data")
       }
+      //  while loop
+//  ==> first check condition then print the output
+       var num = 0;
+       // block scope 
+         while( num <= 10){
+          console.log(num);
+          num++
+         }
+
+          // do-while loop
+          //  this loop first print the output then check  condition
+          var a = 100;
+          do{
+            console.log(a)
+            a++;
+          }
+          while(a <=10) 
+
+         
+          // function ?
+         
 
 
+ function sum()  // this called function definitaion
+ {
+  var a = 10;
+  var b = 10
+  var total = a + b;
+   console.log(total)
+ }
+
+  sum();  // ths is called function  calling
+
+  
 
 
 
