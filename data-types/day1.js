@@ -197,7 +197,73 @@ console.log( (a>b)  && (b>a) ) // here first condition i true and second condtio
 
   sum();  // ths is called function  calling
 
+
+    // function parameter  and function arguments
+     
+     function Sum( a, b){ ///this called function parameter
+       var total = a + b;
+       console.log(total)
+     }
+      Sum();
+     Sum(20,30); // this called function arguments
+
   
+      // Function Expression
+      
+      //  functon expression means simply creates a function and put it in variables
+       function sum1(a,b){
+        var total =  a*b;
+        console.log(total)
+       }
+        var funExpr = sum1(20,5);
+          
+        //  without using return keyword function expression is half process
+  // using return keyword
+   function sum2(a, b){
+    return total = a - b;
+
+   }
+ var funExp = sum2(20, 30)
+  console.log(funExp)
+
+
+  
+
+    //   Arrays  in javascript
+    var myfriend = [ 'Anil', 'Akash', 'ekta', 'anubhav']
+    console.log(myfriend); 
+    console.log(myfriend.length) //  this is tell the length of the array 
+     
+    //  if i want to know the last index of the last then we use the property of the last index = array.length -1 
+       
+
+    console.log(myfriend [myfriend.length - 1]);
+
+    //  USING FOR LOOPS IN ARRAYS 
+       
+     var myfriends = [ 'anil', 'anubhav','vikky', 'nikhil','ekta', 'alisha'];
+    for(var i=0;i<myfriends.length; i++)
+  {
+    console.log(myfriends[i]);
+  }
+
+    // In ES6 javascript
+    //  using for in loops  it is print only index number of the arrays 
+     
+     for(let elements in myfriends){
+      console.log(elements); // 
+     }
+
+
+     // using for of loops it print the arays elements in the given in the arrays ;
+      for(let element of myfriends){
+        console.log(element)
+      }   
+
+
+
+
+          
 
 
 
