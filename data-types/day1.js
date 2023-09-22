@@ -260,6 +260,36 @@ console.log( (a>b)  && (b>a) ) // here first condition i true and second condtio
         console.log(element)
       }   
 
+       
+
+      //  Array.prototype. forEach() // call functions for each elements 
+       
+var myfriends = ['anil', 'anubhav','vikky', 'anu', 'ekta']
+myfriends.forEach(function(element, index, array) {
+  console.log(element + "index: " + index + " " + array);
+})
+
+
+    //  aray.prototype.push() method 
+  // add one or more elements on the last index of the arrays and return new array length
+   
+   const animals = ['dog', 'pig', 'goat','cat'];
+   animals.push('cow','deer','hen');
+   console.log(animals);
+
+     // array.prototype.unshift method
+   // this method add one or more elements on the beginning of the arrays
+    
+    animals.unshift('cow','hen','deer')
+    console.log(animals);
+
+
+     // array.prototype.pop() method
+      // this method remove the last elements of the arrays and change the length of the array
+       console.log(animals.pop())
+
+
+
 
 
 
