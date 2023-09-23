@@ -33,7 +33,19 @@ button {
 <button onclick="changecontent()">click me </button>
 <script>
     const changecontent = () =>{
-        document.getElementById('heading').innerHTML = "welcome to ambition classes"
+        //  we can directly write
+        // document.getElementById('heading').innerHTML = "welcome to ambition classes";
+        // by taking reference the heading is Object
+        // const headingChange = document.getElementById('heading');
+        // headingChange.innerHTML = "welcome to my class"
+        // document.getElementsByClassName('para').innerHTML  = "helllo welcome to my class"
+        console.log(document.getElementsByClassName('para'));
+        console.log(document.getElementsByTagName('p'));
+
+        // now the same ways we have query selector 
+        // queryselector return the first matching values where as
+        // queryselectorall return all the elements
+        document.querySelector('#heading').innerHTML = "i changed my classes again";
 
     }
 </script>
