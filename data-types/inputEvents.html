@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Style for the main container */
+        .main-div {
+            margin: 20px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 300px;
+        }
+
+        /* Style for labels */
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        /* Style for input fields and select elements */
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        /* Style for the select element */
+        select {
+            appearance: none; /* Remove default select styles */
+            -webkit-appearance: none; /* Remove default select styles (for older versions of Chrome) */
+            -moz-appearance: none; /* Remove default select styles (for older versions of Firefox) */
+            background: url('down-arrow.png') no-repeat; /* Add a custom down arrow icon */
+            background-position: right center;
+            background-size: 20px 20px;
+            padding-right: 30px; /* Add space for the arrow icon */
+        }
+    </style>
+</head>
+<body>
+    <div class="main-div">
+        <div>
+            <label for="ice">Your Name</label>
+            <input type="text" name="ice" id="ice">
+            <br>
+            <label for="iceCreams">Choose your ice-cream flavor</label>
+            <select id="iceCreams" name="ice-cream" onchange="selectElement()">
+                <option value="">Select one</option>
+                <option value="chocolate">Chocolate</option>
+                <option value="saradin">Saradin</option>
+                <option value="vanilla">Vanilla</option>
+            </select>
+            <br>
+            <div id="result"></div>
+        </div>
+    </div>
+    <script>
+        // const selectElement = () => {
+        //     const inputChange = document.getElementById('ice').value;
+        //     const inputCreams = document.getElementById('iceCreams').value;
+        //     const result = document.getElementById('result');
+        //     result.innerHTML = `Mr ${inputChange} selects ${inputCreams} ice-cream flavor`;
+        // }
+
+         // by reference using addEventListener (means directly in this unction no need to use inline events(onchange="selectElement()"> this is inline events))
+        const   iceCreams = document.getElementById('iceCreams');
+        iceCreams.addEventListener('change', () => {
+            const inputChange = document.getElementById('ice').value;
+            const iceCreams = document.getElementById('iceCreams').value;
+            const result = document.getElementById('result');
+            result.innerHTML = `Mr ${inputChange} select ${iceCreams} ice-cream flavor`;
+        });
+    </script>
+</body>
+</html>
