@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Style for the main container */
+.main-div {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+}
+
+/* Style for the input field */
+.effect-1 {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Style for the paragraphs */
+p {
+    margin: 0;
+}
+
+/* Style for the output paragraph */
+#keys {
+    font-weight: bold;
+    color: blue;
+}
+
+    </style>
+</head>
+<body>
+    <!-- <p id="myP" onmousedown="mouseDown()" onmouseup="mouseUp()" > click the text! the mouseDown() function is triggerd when the mouse buttion is pressed over ths paragraph and sets the color of the text to red .the mouseup() function is triggered when the mouse button is released and sets the color of the text to green </p>
+<script>
+    function mouseDown(){
+        document.getElementById('myp').style.color = "red";
+    }
+     function mouseUp(){
+        document.getElementById('myP').style.color = "green";
+     }
+</script> -->
+ <div class="main-div">
+    <div>
+        <p> A  function is triggered when user is pressing a key in the input fiels</p>
+    <br>
+    <input type="text" class="effect-1" onkeypress="keyPress()" onkeydown="keyDown()" onkeyup="keyUp()">
+    <br/>
+    <p id="keys"></p>
+    </div>
+ </div>
+
+  <script>
+    const keyPress = (events) => {
+        document.getElementById('keys').innerHTML = `you pass ${event.key} and its code is ${event.code}`;
+    }
+    function keyDown(event) {
+            // You can add code for the keydown event here if needed
+            document.getElementById('keys').innerHTML = `key is down`;
+        }
+
+        function keyUp(event) {
+            // You can add code for the keyup event here if needed
+            document.getElementById('keys').innerHTML = `key is up`;
+        }
+  </script>
+</body>
+
+</html>

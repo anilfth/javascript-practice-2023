@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<body>
+
+
     <style>
         @import url("https://fonts.googleapis.com/css?family=Inconsolata:400, 700");
         body{
@@ -20,6 +20,66 @@
             text-align: center;
             color: rgba(255, 255, 255, 0.4);
         }
+
+        .content{
+            padding-top:45px;
+         padding-bottom: 20px;
+
+        }
+        .button_container{
+            width: 176px;
+
+            margin: 0, auto;
+            margin-top: 30px;
+            margin-top: 40px;
+        }
+        .button_su{
+            overflow: hidden;
+            position: relative;
+            display: inline-block;
+            border-radius: 3px;
+            margin-bottom: 30px;
+            box-shadow: 0px 10px 8px --8px rgba(0, 0, 0, 0.6);
+        }
+        .su_button_circle{
+              background-color: red;
+              border-radius: 100px;
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 0px;
+              animation: explode 0.5s forwards;
+        }
+        .desplode_circle{
+            animation: desplode 0.5s forwards;
+        }
     </style>
+</head>
+<body>
+    <div class="content">
+        <h1> Let's see what is events objects</h1>
+        <div class="button_container">
+            <div class="button_su">
+                <span class="su_button_circle">
+
+                </span>
+                <a href="#" class="button_su_inner" id="fourtway">
+                <span class="button_text_container">
+                    events Listeners
+                </span>
+            </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const fourtway = document.getElementById('fourtway');
+        const checkEvent = () => {
+            alert("we are learning events listener");
+            console.log(event)
+            console.log(event.target);
+            console.log(event.type);
+        }
+        fourtway.addEventListener('click', checkEvent);
+    </script>
 </body>
 </html>
