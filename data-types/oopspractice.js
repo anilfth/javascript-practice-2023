@@ -34,3 +34,15 @@
     bioData2.getData();
 
   
+     // this objects
+    //   console.log(this.alert('awesome')); 
+      // it refers to the current context and that is window global objects
+        
+       const test = {
+        props: 42,
+        func(){
+            return this.props;
+        }
+
+       }
+       console.log(test.func());
