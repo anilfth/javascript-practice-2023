@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.parentDiv {
+    background-color: #f0f0f0; /* Background color for the parentDiv */
+    padding: 100px; /* Add padding for spacing inside the parentDiv */
+    border: 1px solid #ccc; /* Add a border around the parentDiv */
+}
+
+/* Style for the childDiv */
+.childDiv {
+    background-color: #e0e0e0; /* Background color for the childDiv */
+    padding: 50px; /* Add padding for spacing inside the childDiv */
+    border: 1px solid #870606; /* Add a border around the childDiv */
+}
+    </style>
+</head>
+<body>
+    <div class="parentDiv" id="parentId">
+        <div class="childDiv" id="childId">
+             </div>
+    </div>
+    <script>
+        const parentId = document.getElementById('parentId');
+        const childId = document.getElementById('childId');
+        const parentCall = () =>{
+            alert('parent div call');
+
+        }
+        const childCall = () =>
+        {
+            alert('chld div call');
+            // event.stopPropagation();
+        }
+        // parentId.addEventListener('click', parentCall,  false);
+        // childId.addEventListener('click', childCall,  false);
+        parentId.addEventListener('click', parentCall,  true);
+        childId.addEventListener('click', childCall,  true);
+        </script>
+</body>
+</html>
