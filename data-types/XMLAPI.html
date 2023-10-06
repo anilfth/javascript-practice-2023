@@ -5,6 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+/* Reset some default styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the container */
+#container {
+    text-align: center;
+    margin: 20px;
+}
+
+/* Style the card */
+#card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: inline-block;
+}
+
+/* Style the card title */
+.card-body-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Style the card text */
+.card-body-text {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* Style the card image */
+.card-body-img {
+    max-width: 100px;
+    border-radius: 5px;
+}
+
+/* Style the card footer */
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Style the card footer sections */
+.card-footer-social {
+    flex: 1;
+    text-align: center;
+}
+
+/* Style the card footer headings */
+.card-footer h3 {
+    font-size: 18px;
+}
+
+/* Style the card footer subheadings */
+.card-footer p {
+    font-size: 14px;
+    color: #777;
+}
 
     </style>
 </head>
@@ -13,7 +75,41 @@
     <script>
         const container = document.querySelector('#container');
         const request = new XMLHttpRequest();
-        request.open('GET','https://restcountries.eu/rest/v2/name/nepal');
+        // request.open('GET','https://restcountries.eu/rest/v2/name/nepal');
+        request.open('GET', "https://www.countryflagicons.com/STYLE/size/COUNTRYCODE.png");
+        request.send();
+         // to get the respones
+         request.addEventListener('load', function(){
+            console.log(this.requestText);
+            const [data] = JSON.parse(this.responseText);
+            console.log(data.capital);
+        });
+            const htmlData = ` 
+            <div id="card">
+                <div class='card-body'>
+                    <img src="${data.flag}" alt='' class="card-body-img"/>
+                    <h1 class="car-body-title">
+                        ${data.name} <span> </span>
+                        </h1>
+                        <p class="card-body-text"> capital: ${data.capital} </p>
+                        </div>
+                        <div class='card-footer'>
+                            <div class='card-footer-social'>
+                                <h3 > ${data.nativename} </h3>
+                                <p> Native language </p>
+                                </div>
+                                <div class="card-footer-social">
+                                    <h3> ${data.population} </h3>
+                                    <p> pipulation </p>
+                                    </div>
+                                    <div class="card-footer-social">
+                                        <h3> ${data.demonym} </h3>
+                                        <p> demonym </p>
+                                        </div>
+                                        </div>
+                                        </article>
+                                        </div>`;
+         
     </script>
 </body>
 </html>
