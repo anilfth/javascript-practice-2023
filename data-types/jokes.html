@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+h3 {
+    font-size: 24px;
+    color: #333;
+}
+
+.joke {
+    font-size: 18px;
+    color: #555;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.btn {
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3> Best jokes to make your day</h3>
+        <div id="joke" class="joke"> Awesome jokes is loading...</div>
+        <button id="jokebtn" class="btn"> Next jokes</button>
+
+    </div>
+    <script> 
+    // using promises
+    const jokes = document.querySelector('#joke');
+    const jokebtn = document.querySelector('#jokebtn');
+    const generateJoke = () => {
+        const setHeader = {
+            headers : {
+                Accept : "application/json"
+            }
+        }
+        fetch('https://icanhazdadjoke.com/', setHeader)
+        .then(res => res.json())
+        .then((data) => {
+            jokes.innerHTML = data.joke;
+        }).catch((error) => {
+            console.log(error);
+        })
+    }
+    
+    </script>
+    
+</body>
+</html>
