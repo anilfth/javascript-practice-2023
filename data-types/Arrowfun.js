@@ -18,3 +18,15 @@ greet();
     console.log(x *x);
    }
    square1(5)
+    
+    // Multiple Parameter 
+     const add = (a, b) =>
+     a + b;
+     console.log(add(2,4));
+      
+    //  OR
+     const sub = (a, b) => {
+        let subs = a - b;
+        console.log(subs);
+     }
+      sub(5,2);
