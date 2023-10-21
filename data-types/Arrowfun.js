@@ -30,3 +30,11 @@ greet();
         console.log(subs);
      }
       sub(5,2);
+
+       // function body with multiple statements 
+        
+       const greetperson = name =>{
+        const greeting = "Hello" + name + "!";
+        return greeting;
+       }
+       console.log(greetperson('Anil'));
