@@ -37,4 +37,10 @@ greet();
         const greeting = "Hello" + name + "!";
         return greeting;
        }
-       console.log(greetperson('Anil'));
+       console.log(greetperson('Anil')); 
+
+
+       //  output string s 
+        
+        let senetence = 'Javascript is fun';
+        console.log(senetence.trim().length);
