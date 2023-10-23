@@ -72,3 +72,6 @@ greet();
             //   trim()--> removes leading and trailing white spaces from the string
               let name = " Lovely professionakl university is  a india largest univesity "
                console.log(name.trim());
+
+                
+               
