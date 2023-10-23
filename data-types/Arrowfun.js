@@ -42,5 +42,12 @@ greet();
 
        //  output string s 
         
-        let senetence = 'Javascript is fun';
+        let senetence = 'javascript is fun';
         console.log(senetence.trim().length);
+         
+         
+        // to convert toLowerCase 
+         console.log(senetence.toLowerCase());
+
+         // to conert toUperCase
+          console.log(senetence.toUpperCase());
