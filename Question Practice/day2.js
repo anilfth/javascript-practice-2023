@@ -18,4 +18,12 @@
   obj1['salary'] = '25k';
   obj1['location'] = 'pune'
   console.log(obj1)
-  
+
+
+  // using Object.assign() 
+  const obj2 = {
+    name: 'Ayush',
+    age: 22
+  };
+  const newObj = Object.assign({}, obj2, {job:'coder'}, {salary:'255k'},{location:'kanpur'});
+  console.log(newObj);
